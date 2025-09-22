@@ -4,13 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TikTok Downloader</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 20px 0;
+    }
+    form {
+      margin: 20px auto;
+      max-width: 400px;
+      display: flex;
+      gap: 8px;
+    }
+    input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 16px;
+      font-size: 16px;
+      background: #0073e6;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005bb5;
+    }
+    #result {
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
   <h1>TikTok Downloader</h1>
-  <input type="text" id="urlInput" placeholder="Paste TikTok link here">
-  <button onclick="downloadVideo()">Download</button>
+
+  <!-- ✅ IMPORTANT: id="downloadForm" -->
+  <form id="downloadForm">
+    <!-- ✅ IMPORTANT: id="urlInput" -->
+    <input type="text" id="urlInput" placeholder="Paste TikTok link here" required>
+    <button type="submit">Download</button>
+  </form>
+
+  <!-- ✅ IMPORTANT: id="result" -->
   <div id="result"></div>
+
+  <!-- ✅ Loads our debug script -->
   <script src="script.js"></script>
 </body>
 </html>
