@@ -21,7 +21,7 @@ app.post("/api/download", async (req, res) => {
   return res.json({
     downloadUrl: demoLink,
     info: "Demo download link. Replace with real API integration later."
-  });
+  }) 
 });
 
 app.get("*", (req, res) => {
@@ -31,3 +31,4 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
 });
+ 
